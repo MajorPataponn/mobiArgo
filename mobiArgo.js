@@ -10,5 +10,16 @@
 (function() {
     'use strict';
 
-    // Your code here...
+    // Get all elements with the class 'nav-bar__item'
+    var parentElements = document.querySelectorAll('.nav-bar__item');
+
+    // Loop through each parent element
+    parentElements.forEach(function(parentElement) {
+        // Check if the parent element contains a child element with the class 'fa fa-broadcast-tower'
+        var childElement = parentElement.querySelector('.fa.fa-broadcast-tower');
+        if (childElement) {
+            // If found, hide the parent element
+            parentElement.style.display = 'none';
+        }
+    });
 })();
